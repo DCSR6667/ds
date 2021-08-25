@@ -112,24 +112,10 @@ class CDLinkedList:
     
 
 
-cd=CDLinkedList()
-cd.insert(0,1)
-cd.insert(1,1)
-cd.insert(2,1)
-cd.insert(3,1)
-cd.insert(4,1)
-
-cd.display()
-print()
-
-cd.delete(3)
-cd.delete(3)
-cd.insert(1,1)
-cd.delete(4)
 
 
 
-cd.display()
+
 
 
             
