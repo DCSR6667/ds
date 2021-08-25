@@ -2,84 +2,94 @@ class Node:
     def __init__(self,value=None):
         self.value=value
         self.next=None
-
-
-class SLinkedList:
+class CLinkedList:
     def __init__(self):
         self.head=None
         self.tail=None
-    
-    
     def insert(self,val,loc):
-        newnode=Node(val)
+        node=Node(val)
         if self.head is None:
-            self.head=newnode
-            self.tail=newnode
+            self.head=node
+            self.tail=node
         elif loc==0:
-            newnode.next=self.head
-            self.head=newnode
+            node.next=self.head
+            self.tail.next=node
+            self.head=node
         elif loc==1:
-            self.tail.next=newnode
-            self.tail=newnode
+            node.next=self.head
+            self.tail.next=node
+            self.tail=node
         else:
             i=1
             temp=self.head
             while i<loc:
                 temp=temp.next
                 i=i+1
-            newnode.next=temp.next
-            temp.next=newnode
+            node.next=temp.next
+            temp.next=node
             if temp is self.tail:
-                self.tail=newnode
-        return "inserted successfully"
-    
-    
+                self.tail=node
+                self.tail.next=self.head
+   
+   
     def display(self):
         if self.head is None:
-            print("linked list is empty")
+            print("CLinkedList is empty")
         else:
             temp=self.head
-            while temp:
+            while temp.next is not self.tail:
                 print(temp.value,end="-->")
                 temp=temp.next
+            print(temp.value,end="-->")
+            temp=temp.next
+            if temp:
+                print(temp.value)
     
-    
+
     def search(self,data):
-        temp=self.head
-        while temp:
+        if self.head is None:
+            print("CLickedList is empty")
+        else:
+            temp=self.head
+            while temp is not self.tail:
+                if temp.value==data:
+                    return True
+                temp=temp.next
             if temp.value==data:
                 return True
-            temp=temp.next
+            if temp.next:
+                if temp.next.value==data:
+                    return True
         return False
     
-    
+
     def isempty(self):
         if self.head is None:
             return True
         else:
             return False
     
-    
-    
+
     def delete(self,loc):
         if self.isempty():
-            print("linked list is empty we cant perform delete operation")
+            print("Clinked list is empty we cant delete element")
         elif loc==0:
             if self.head is self.tail:
                 self.head=None
                 self.tail=None
             else:
                 self.head=self.head.next
+                self.tail.next=self.head
         elif loc==1:
-            if self.head is self.tail:
+             if self.head is self.tail:
                 self.head=None
                 self.tail=None
-            else:
+             else:
                 temp=self.head
                 while temp.next is not self.tail:
                     temp=temp.next
                 self.tail=temp
-                temp.next=None
+                self.tail.next=self.head
         else:
             i=1
             temp=self.head
@@ -91,10 +101,10 @@ class SLinkedList:
                 return
             if temp.next is self.tail:
                 self.tail=temp
+                self.tail.next=self.head
             temp.next=temp.next.next
 
-
-
+            
 
 
     
@@ -106,13 +116,6 @@ class SLinkedList:
 
 
 
-
-
-
-
-
-
-
-
+            
 
 

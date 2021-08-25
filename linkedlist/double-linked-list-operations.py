@@ -1,48 +1,47 @@
 class Node:
     def __init__(self,value=None):
+        self.prev=None
         self.value=value
         self.next=None
-
-
-class SLinkedList:
+class DLinkedList:
     def __init__(self):
         self.head=None
         self.tail=None
-    
-    
     def insert(self,val,loc):
-        newnode=Node(val)
+        node=Node(val)
         if self.head is None:
-            self.head=newnode
-            self.tail=newnode
+            self.head=node
+            self.tail=node
         elif loc==0:
-            newnode.next=self.head
-            self.head=newnode
+            node.next=self.head
+            self.head.prev=node
+            self.head=node
         elif loc==1:
-            self.tail.next=newnode
-            self.tail=newnode
+            self.tail.next=node
+            node.prev=self.tail
+            self.tail=node
         else:
             i=1
             temp=self.head
             while i<loc:
                 temp=temp.next
                 i=i+1
-            newnode.next=temp.next
-            temp.next=newnode
+            node.next=temp.next
+            if temp.next:
+                temp.next.prev=node
+            temp.next=node
+            node.prev=temp
             if temp is self.tail:
-                self.tail=newnode
-        return "inserted successfully"
-    
+                self.tail=node
     
     def display(self):
-        if self.head is None:
-            print("linked list is empty")
+        temp=self.head
+        if temp is None:
+            print("DLinkedList is empty")
         else:
-            temp=self.head
             while temp:
                 print(temp.value,end="-->")
                 temp=temp.next
-    
     
     def search(self,data):
         temp=self.head
@@ -52,18 +51,15 @@ class SLinkedList:
             temp=temp.next
         return False
     
-    
     def isempty(self):
         if self.head is None:
             return True
         else:
             return False
     
-    
-    
     def delete(self,loc):
         if self.isempty():
-            print("linked list is empty we cant perform delete operation")
+            print("we cant delete element because DLinkedList is empty")
         elif loc==0:
             if self.head is self.tail:
                 self.head=None
@@ -75,11 +71,8 @@ class SLinkedList:
                 self.head=None
                 self.tail=None
             else:
-                temp=self.head
-                while temp.next is not self.tail:
-                    temp=temp.next
-                self.tail=temp
-                temp.next=None
+                self.tail=self.tail.prev
+                self.tail.next=None
         else:
             i=1
             temp=self.head
@@ -92,27 +85,37 @@ class SLinkedList:
             if temp.next is self.tail:
                 self.tail=temp
             temp.next=temp.next.next
+            if temp.next:
+                temp.next.prev=temp
+            
+
+
+d=DLinkedList()
+d.insert(0,0)
+d.insert(1,0)
+d.insert(2,0)
+d.insert(3,1)
+d.insert(4,1)
+d.insert(5,1)
+d.display()
+print()
+d.delete(1)
+d.delete(1)
+d.delete(2)
+d.delete(2)
+d.delete(2)
+d.delete(1)
+d.delete(0)
 
 
 
 
 
+
+
+d.display()
+
+
+
+        
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
