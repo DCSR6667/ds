@@ -113,17 +113,8 @@ class cqueue:
                  print(self.l[i],end=" ")
                  i=i+1
         
-cq=cqueue(4)
-cq.enqueue(1)
-cq.enqueue(2)
-cq.enqueue(3)
-cq.enqueue(4)
-cq.dequeue()
-cq.dequeue()
-cq.enqueue(5)
-cq.enqueue(6)
-print(cq.peek())
-cq.display()
+
+
 
     
     

@@ -49,16 +49,7 @@ class queue:
                 print(temp.value,end="-->")
                 temp=temp.next
 
-q=queue()
-q.enqueue(1)
-q.enqueue(2)
-q.enqueue(3)
-q.enqueue(4)
-q.dequeue()
 
-q.dequeue()
-print(q.peek())
-q.display()
 
 
         
