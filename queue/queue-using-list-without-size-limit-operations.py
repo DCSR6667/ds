@@ -25,7 +25,7 @@ class queue:
     
     def __str__(self):
         l1=[str(i) for i in self.l]
-        return ' '.join(l1)'
+        return ' '.join(l1)
 
 
     

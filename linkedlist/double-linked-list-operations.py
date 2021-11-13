@@ -90,22 +90,6 @@ class DLinkedList:
             
 
 
-d=DLinkedList()
-d.insert(0,0)
-d.insert(1,0)
-d.insert(2,0)
-d.insert(3,1)
-d.insert(4,1)
-d.insert(5,1)
-d.display()
-print()
-d.delete(1)
-d.delete(1)
-d.delete(2)
-d.delete(2)
-d.delete(2)
-d.delete(1)
-d.delete(0)
 
 
 
@@ -113,7 +97,11 @@ d.delete(0)
 
 
 
-d.display()
+
+
+
+
+
 
 
 
