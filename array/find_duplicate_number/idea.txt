@@ -1,0 +1,5 @@
+1...use dict and maintain count---o(n2)
+2...use sort function and solve--o(nlogn)
+3..take two variables slow and fast and move slow by nums[slow] and move fast by nums[nums[fass]] until they collide
+after they collide move fast to nums[0] and move slow by nums[slow] and move fast by nums[fast] until they collide.
+at the point they collide is the duplicate number

@@ -1,0 +1,2 @@
+1...use predefined set operators--
+2...use set concepts and perform traversing and add in a set---o(m+n)

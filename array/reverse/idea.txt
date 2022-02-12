@@ -1,0 +1,4 @@
+1..take two pointers and perform swaping--O(n)
+2..by using slicing--O(n)
+3..traverse from the back and store it in a ds--o(n)
+4..by using recursion--o(n)

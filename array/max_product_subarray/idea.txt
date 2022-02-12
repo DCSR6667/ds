@@ -1,0 +1,4 @@
+1...take two loops and take two variables max,product and try it  ----o(n2)
+2...it is same as max sum subarray here we will take product=1 when product=0.because when product is 0 and we will multiply
+0 with other elements the we cant get maximum product that why we will take product=1....and in some cases it will not work 
+so how to overcome it.we can overcome it by repeating same logic from backwards and take product=1----o(n)

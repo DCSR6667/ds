@@ -1,0 +1,4 @@
+1...take res varaible and check whelther the element of A is avaiable in B and C and not in res(to avoid duplicates)
+  if it is availble then append ele into res---O(n2)
+2...take three varaibles i,j,k=0,0,0 if a[i]==b[j]==c[k] then append ele to res.else if a[i]<b[j] then i++(because a[i] is not in b list that why i++)
+     else if b[j]<c[k] then j++ else k++ ---O(n)

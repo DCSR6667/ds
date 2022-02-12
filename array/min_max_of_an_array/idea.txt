@@ -1,0 +1,1 @@
+1...take two variables max,min and assigned the values of first and second values of list and traverse from third one--o(n)

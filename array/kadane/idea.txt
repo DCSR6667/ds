@@ -1,0 +1,3 @@
+1.....take two loops let i starts from 0-(n-1) and let j starts from i-(n-1) and take two varaibles max ans sum and try it------O(n2)
+2......this method take o(n).the idea is excluded the negative sum means whenever sum is negative then take sum=0.because when sum is negative and if we add that 
+negative sum to the next elements then we cant get maximum sum that why we will take sum=0 whem sum is negative. 

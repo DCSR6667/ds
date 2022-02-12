@@ -1,0 +1,4 @@
+1..kth smallest element
+2..minimum no of jumps
+3..count_pairs
+4..maximum subarray product

@@ -1,0 +1,11 @@
+1....concept-----------
+      two intervals l1 and l2 are merged if and only if
+              l1[1]==l2[0] or l1[1]>l2[0]
+      merging interval---------------
+        [l1[0],max(l1[1],l2[1])]
+  problem------------------------
+let us take varaible res=interval[0] and a empty list=[] and sort the intervals
+  take a element of interval and check merging is possible with res or not
+   ***if merging is possible then perform merging and assigned to res and move to next ele of interval
+   ***if merging is not possible then append res to list and res=ele and move to next ele of interval
+after finishing the entire loop then append the res to list---o(nlogn+n)
