@@ -1,0 +1,3 @@
+1...use set operations---O(n)
+2...indexing
+   ***take an element and go to that index and mark it as negative--O(n)

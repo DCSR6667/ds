@@ -1,0 +1,2 @@
+1...start a loop from 0 to m(rows) and apply slicing concept -----O(n)
+2....in non python(decalration is  there) we can take 2 loops starts for 0-m(rows) and 0-n(columns) and we can apply some logic--O(m*n)

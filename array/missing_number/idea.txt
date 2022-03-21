@@ -1,0 +1,4 @@
+1....calculate sums and subtract then we will get missing number--O(n)
+2... bit manipulation
+      **a^a=0
+      **0^a=a----O(n)

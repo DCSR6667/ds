@@ -1,0 +1,16 @@
+1...first take a empty list l and add [1] this  ....O(n2)
+       this is repeating procedure
+               1.take a list and add 1 and apply some logic and add 1 and append this entire result to l(list) 
+
+2... if we want to find a element in a pascal triangle then we can this formula r-1Cc-1 --O(n)
+3...if we want  to find a specific row of a pascal triangle then ---O(n)
+          add 1
+          some logic--------------------for(int i=0;i<k;i++)
+                                           {
+                                               res=res*(n-i);
+                                               res=res/(i+1)
+                                            }
+
+
+          add 1
+         
