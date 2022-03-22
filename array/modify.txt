@@ -2,3 +2,4 @@
 2..minimum no of jumps
 3..count_pairs
 4..maximum subarray product
+5.count inversions

@@ -1,0 +1,6 @@
+1....we can solve it simply by using two loops---O(n2)
+2... by maintaining prefix sum dictionary(with key as prefix sum and value as index so that we can maintain length) ---O(n)
+            if sum is zero then it have to meet this condition
+            *prefix sum of any ele is 0
+            *if two eles have same prefix sum
+            *arr[i]==0

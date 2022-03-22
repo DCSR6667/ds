@@ -1,0 +1,3 @@
+1...sort the array and take two pointers i and j and do it---O(nlogn)
+2...first add all the elements in the set---O(n)
+         counting of numbers will start if we find minimum number

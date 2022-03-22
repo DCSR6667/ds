@@ -1,0 +1,6 @@
+1..simply use two loops and find it--------O(n2)
+2... by maintaining prefix sum set ---O(n)
+            if sum is zero then it have to meet this condition
+            *prefix sum of any ele is 0
+            *if two eles have same prefix sum
+            *arr[i]==0

@@ -1,0 +1,2 @@
+1...traverse the elements of array2 and check whether elements is available in array1 or not--O(n2)
+2...traverse the elements of array2 and check whether elements is available in set(array1) or not--O(n)
