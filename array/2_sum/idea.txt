@@ -1,0 +1,7 @@
+1...take two loops i starts from (o-n) and j starts from (i+1--n) and check the condition and do it---O(n2)
+2..a+b=target then b=target-a this is the idea---O(n)
+      we will take a empty dictionary 
+      we will traverse every element of nums and check b is available in dict
+          if available return indexes
+          if not available then add the element and index in the dictionary
+       

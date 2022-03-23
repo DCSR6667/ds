@@ -1,0 +1,9 @@
+1....take two pointers i and j and set data structure i,j=0,0----O(n)
+      traverse the j from (o-n) and check character is available in set or not
+         if not available 
+            add char to set 
+            update max
+            increment j
+         if available
+            remove the i th index element from set and increment i
+            
