@@ -1,0 +1,9 @@
+1...take two loops and try to find out(brute force approach)----O(n2)
+2...use dictionary and try to make frequency----O(n)---space--O(n)
+
+3...counting and cancelling method in this we will take one loop ---O(n)
+     n//k if k==2 then there exists  max one majority ele that why we use ele and count
+          if k==3 then there exists  maximum two majority elements that why we use 4 variables ele1,ele2,count1,count2
+    
+
+ 

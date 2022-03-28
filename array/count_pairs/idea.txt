@@ -1,1 +1,8 @@
-1...take two loops and try this----o(n2)
+1...take two loops and try this----O(n2)
+2...concept a+b=sum so b=sum-a---------O(n)
+ take a dictionary
+         check sum-a is in dict
+           if available 
+              count=count+d[sum-i] 
+           add the element in the dictionary if it is not there.if it is there increment the frequency count of the element
+         

@@ -1,0 +1,19 @@
+1---the first approach is use 3 loops and try to solve it---O(n3)
+2....a+b+c=target then c=target-a-b this is the idea---O(n2) and space is O(n)
+      we will take a empty set 
+      we will traverse every element of nums(by two loops) and check c is available in set
+          if available return true
+          if not available then add the element 
+
+3----first sort the array---------O(n2) and space--O(1)
+         take 3 pointers i,l,h with 2 loops
+           find target-a[i] and check target-a[i] is equal to a[l]+a[h]
+              if equals
+                 return true
+              if a[l]+a[h]>target-a[i]
+                  h--
+              if a[l]+a[h]<target-a[i]
+                  l++
+
+
+       

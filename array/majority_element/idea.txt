@@ -1,0 +1,13 @@
+1...take two loops and try to find out(brute force approach)----O(n2)
+2...use dictionary and try to make frequency----O(n)---space--O(n)
+3..sort the array and return nums[len(nums)//2]---O(nlogn)
+4...counting and cancelling method in this we will take one loop and two  varaiables count and ele---O(n)
+        if count==0:
+            ele=nums[i]
+        if ele==nums[i]
+           count++
+        else:
+            count---
+ finally ele represents the majority element
+ 
+ 

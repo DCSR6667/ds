@@ -1,1 +1,1 @@
-1...take two loops and wor on it-----O(n2)
+1...take two loops and work on it-----O(n2)
