@@ -1,0 +1,12 @@
+1...heap sort====create heap of n elements+delete n elements of heap----nlogn+nlogn=2nlogn---O(nlogn)
+     
+   inserting an ele in a heap
+-------------------------------
+ the idea is we will divide array into 2 division.the 1st division is heap area and the second division is non heap area
+   we will take every element of non heap area and we will find position in heap area and we will insert it
+  
+  deleting an ele in a heap
+-------------------------------------
+the only element we can delete from heap is only root element(that is 1st ele of array)
+----first we will swap first  and last element and decreased the heap size(so that we can assume an ele is deleted from heap)
+         now the only thing that we want to do is adjust the elements of heap

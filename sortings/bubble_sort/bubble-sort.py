@@ -5,9 +5,7 @@ def bubblesort(nums,n):
         flag=0
         while j<n-1-i:
             if nums[j]>nums[j+1]:
-                temp=nums[j]
-                nums[j]=nums[j+1]
-                nums[j+1]=temp
+                nums[j],nums[j+1]=nums[j+1],nums[j]
                 flag=1
             j+=1
         if flag==0:

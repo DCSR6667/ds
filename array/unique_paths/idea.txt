@@ -1,0 +1,3 @@
+1......use recursion-----time is exponential
+2......use two dimensional array filled with ones....logic ..add top and left value so we will get all possible ways--O(n2)
+3.....use arrangement concept then we will find that is equal to ncr----O(n)

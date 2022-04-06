@@ -1,0 +1,5 @@
+1...it is exactly same as count sort but with a small difference---O(n)
+      here we will take a array(b) with size (max+1)
+        and we will not maintain any frequencies.instead of mataining frequencies we will maintain elements itself
+          either by list or by linked list
+   space---huge space when compared with count sort

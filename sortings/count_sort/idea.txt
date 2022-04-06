@@ -1,0 +1,4 @@
+1....find out the maximum element and take an array(b) of size max+1---O(n) but it requires more space
+       and in b you have to maintain frequencies of every element
+       now traverse through the b and copy indexes according to their frequencies to original array
+      

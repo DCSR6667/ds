@@ -1,0 +1,6 @@
+1...the idea is we will divide the array into 2 parts.first part indicates sorted array and second part indicates
+      unsorted array
+     at every  time we will take the element of unsorted array and we will find the position in sorted array
+       and we will insert the element.
+     **i--(1---<n)
+        it is default adaptive so that min--O(n) and max--O(n2)

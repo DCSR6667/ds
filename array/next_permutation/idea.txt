@@ -1,0 +1,11 @@
+1...1..first take a variable dec ----------O(n)
+           if a[dec]>=a[dec+1] then we cant find larger  number
+            if a[dec]<a[dec+1] then we can find larger  number
+          by using above condition find dec position
+    2..now reverse the elements from dec+1 to end of nums -----so that we can find immediate next permutation
+     3..next_dec=dec+1
+           find a position where a[next_dec]>a[dec]
+            and then swap a[next_dec] and a[dec]
+         
+         
+         

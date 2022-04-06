@@ -1,0 +1,4 @@
+1...the idea is at every pass(outer loop) the larger element will be moved to the end of the array
+       the outer loop will start from i=(0--<n-1)
+       the inner loop will start from j=(0--<n-1-i)
+       it is not default adaptive we will make it adaptive so min time--O(n)  max time O(n2)

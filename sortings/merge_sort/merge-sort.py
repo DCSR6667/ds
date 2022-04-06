@@ -7,7 +7,7 @@ def mergesort(nums,l,h):
         merge(nums,l,mid,h)
 def merge(nums,l,mid,h):
     i,j,k=l,mid+1,l
-    b=[None for x in range(h+1)]
+    b=[0 for x in range(h+1)]
     while i<=mid and j<=h:
         if nums[i]<nums[j]:
             b[k]=nums[i]
@@ -27,6 +27,6 @@ def merge(nums,l,mid,h):
         nums[i]=b[i]
         i+=1
 
-nums=[2,9,4,8,1]
+nums=[2,9,4,8,1,1,2,3,4]
 mergesort(nums,0,len(nums)-1)
 print(nums)

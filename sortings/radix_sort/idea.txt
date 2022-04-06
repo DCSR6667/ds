@@ -1,0 +1,7 @@
+1...in this we will not take array(b) of size max+1 we will take array(b) of size 10(based on radix)
+      and we will store elements either by ll or by array based on some calculations and copy all elements of b to original array
+      and repeat this procedure for noofdigits
+
+       time---O(dn)---O(n)
+       space less than count and bin sort
+    

@@ -1,0 +1,8 @@
+1...at every pass(outer loop) the smallest element will moved to the start of the array
+     i=(0---<n-1)
+     j=(i+1---<n)
+     k=i
+   the idea is if a[j]<a[k]
+                then move k to j
+             finally k represents smallest element so interchange a[k] and a[i]
+    it is not adaptive---O(n2)
