@@ -1,0 +1,4 @@
+1...the 1st approach is take two loops and do it---O(n2)
+2...2nd approach is use of  merging concept---O(nlogn)
+       our logic is placed before merging logic
+     
