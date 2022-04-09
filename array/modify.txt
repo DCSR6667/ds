@@ -1,4 +1,4 @@
 1..kth smallest element
 2..minimum no of jumps
 4..maximum subarray product
-5.count inversions
+5.set matrix zeros

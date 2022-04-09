@@ -1,0 +1,3 @@
+1....take a new matrix and copy the elements from  original matrix to new matrix in your respective(based on your condition) order---O(mn)  space--O(m+n)
+        now copy all  elements from new matrix to original matrix         
+2....rotate of a matrix==transpose of matrix + reverse the rows----O(mn)   space--O(1)

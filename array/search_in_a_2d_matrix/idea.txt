@@ -1,0 +1,23 @@
+1...perform linear search on the matrix it will take ---O(m*n)
+2..take one row of matrix and perform binary search repeat this procedure---O(mlogn)
+3..in the question they given elements are sorted from row wise and column wise so we use this concept--O(m+n)
+    take two pointers i=0 j=len(matrix[0])-1
+             if matrix[i][j]==target:
+                return True
+             elif matrix[i][j]>target:
+                   j--
+             else
+                   i++
+           repeat this until i<n and j>=0
+
+
+
+4..in the question they given That first integer of each row is greater than the last integer of the previous 
+      row so we use this concept 
+          
+       ** from this we can say that  if all elements are arranged in linear manner then they are sorted in ascending order
+            so we  will apply a binary search on this matrix---O(logmn)
+    
+          
+                
+       

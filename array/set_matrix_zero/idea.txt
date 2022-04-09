@@ -1,0 +1,5 @@
+1..traverse through the matrix and if any element is zero then change the entire row and col elements to x---O(m*n*(m+n))
+  traverse through the matrix and if any element is x then change the element to 0
+2..take 2 lists(row and col)----O(m*n) space --O(m+n)
+   traverse through the matrix  and if any element is zero then modify row[i]=0 and col[j]=0
+   traverse through the matrix and check if row[i]=0 or  col[j]=0 then modify matrix[i][j]=0
