@@ -1,0 +1,9 @@
+3,9,10,20,22,23,26,29-36,39,41-43,45
+------------------------------------------------
+set matrix zeros
+4-sum
+count no of subarrays with given x or k
+------------------------------------------------
+product of array except itself 
+find all duplicates in an array
+first missing positive

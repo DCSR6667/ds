@@ -1,0 +1,11 @@
+1...take a dictionary and insert all the elements of first row with their respectively frequencies---O(m*n)  space--O(n)
+        now our dict contains first row elements along with their frequnecies
+        now traverse from second row and check
+                   if the element is in dict and dict[ele]=row(to avoid duplicates frequencies)
+                        dict[ele]+=1
+         finally we will traverse through dict and we will check 
+                    if dict[ele]==m:
+                        print(ele)
+                        
+                    
+                                             

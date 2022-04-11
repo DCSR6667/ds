@@ -1,1 +1,12 @@
 1...use sort function--o(nlogn)
+2..use heap concept
+      smallest,minimum,closest------max heap
+      largest,maximum,longest,----minheap
+    
+     
+	from the above we can know that we want use max heap------------nlog(k+1)
+         take 1 by 1 element of arr and insert into maxheap
+            and if sizeofheap>k   --here we restrict the size of heap to k
+                  then pop an element form an heap
+       then finally heap[0] gives kth smallest element 
+      

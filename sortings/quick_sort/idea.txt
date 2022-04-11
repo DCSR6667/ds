@@ -1,0 +1,5 @@
+1...take a pivot element let it be first element and i=first+1 and j=end------O(nlogn)
+       make i points to larger element and j points to smaller element and swap those two elements
+          this process is continued until i>j.if i>j then swap arr[j] and pivot element then we can say that pivot ele is sorted
+             and this process is continued for every element through recursion
+                 
