@@ -7,43 +7,53 @@ class CLinkedList:
         self.head=None
         self.tail=None
     def insert(self,val,loc):
-        node=Node(val)
+        newnode=Node(val)
         if self.head is None:
-            self.head=node
-            self.tail=node
+            self.head=newnode
+            self.tail=newnode
         elif loc==0:
-            node.next=self.head
-            self.tail.next=node
-            self.head=node
-        elif loc==1:
-            node.next=self.head
-            self.tail.next=node
-            self.tail=node
+            newnode.next=self.head
+            self.head=newnode
+            self.tail.next=self.head
+        elif loc==self.length():
+            newnode.next=self.head
+            self.tail.next=newnode
+            self.tail=newnode
         else:
             i=1
             temp=self.head
             while i<loc:
                 temp=temp.next
                 i=i+1
-            node.next=temp.next
-            temp.next=node
-            if temp is self.tail:
-                self.tail=node
-                self.tail.next=self.head
-   
+            newnode.next=temp.next
+            temp.next=newnode
+           
+           
    
     def display(self):
         if self.head is None:
             print("CLinkedList is empty")
         else:
             temp=self.head
-            while temp.next is not self.tail:
+            while temp is not self.tail:
                 print(temp.value,end="-->")
                 temp=temp.next
             print(temp.value,end="-->")
-            temp=temp.next
-            if temp:
-                print(temp.value)
+
+    def length(self):
+        if self.head is None:
+            return 0
+        else:
+            temp=self.head
+            count=0
+            while temp is not self.tail:
+                count+=1
+                temp=temp.next
+            count+=1
+            return count
+            
+            
+            
     
 
     def search(self,data):
@@ -57,9 +67,8 @@ class CLinkedList:
                 temp=temp.next
             if temp.value==data:
                 return True
-            if temp.next:
-                if temp.next.value==data:
-                    return True
+            
+            
         return False
     
 
@@ -80,31 +89,26 @@ class CLinkedList:
             else:
                 self.head=self.head.next
                 self.tail.next=self.head
-        elif loc==1:
-             if self.head is self.tail:
-                self.head=None
-                self.tail=None
-             else:
-                temp=self.head
-                while temp.next is not self.tail:
-                    temp=temp.next
-                self.tail=temp
-                self.tail.next=self.head
         else:
             i=1
             temp=self.head
             while i<loc:
                 temp=temp.next
                 i=i+1
-            if temp is self.tail:
-                print("we cant delete ele")
-                return
+           
             if temp.next is self.tail:
-                self.tail=temp
-                self.tail.next=self.head
+               self.tail=temp
             temp.next=temp.next.next
 
-            
+
+
+
+
+
+
+
+
+
 
 
     
