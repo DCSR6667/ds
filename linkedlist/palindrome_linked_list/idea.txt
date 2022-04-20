@@ -1,0 +1,12 @@
+1..the first approach is traverse through linked list and store all the values in list data structure
+   then apply palindrome logic on list---O(n+n)--O(n)---space---O(n)
+2..first find the mid element---O(n/2+n/2+n/2)--O(n)--space--O(1)
+   now reverse the right part of mid element
+       slow=slow.next
+        while slow is not None:
+            if head.val!=slow.val:
+                return False
+            head=head.next
+            slow=slow.next
+        return True
+

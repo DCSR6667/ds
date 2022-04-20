@@ -1,0 +1,9 @@
+1..the idea is find the length of linked list from that u will find pos=length-n--O(n+n)--O(n)
+    then go to that position and delete it but be careful while deleting the first node
+
+2..1 first add a new node at the beginning of the linked list----O(n)
+    2 then take two pointers slow and fast they both point to newnode
+    3 move fast to n position
+    4 then move slow and fast until fast.next!=None
+    after that by using slow delete the node
+      

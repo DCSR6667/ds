@@ -1,0 +1,21 @@
+1...take a set ds traverse through the linked list elements and check--O(n)--space--O(n)
+      while temp:
+            if temp not in s:
+                s.add(temp)
+                temp=temp.next
+            else:
+                return temp
+2...formulae approach--O(n)----space--O(1)
+     entry,slow,fast=head,head,head
+    find colloision point by using slow and fast pointer
+     after finding collosion point move slow and entry by one step until entry!=slow
+     if entry==slow then return slow or entry
+    
+     formulae
+     slow=l1+l2 distance
+     fast=l1+l2+nc distance
+     2(l1+l2)=l1+l2+nc
+     l1=nc-l2
+
+
+    

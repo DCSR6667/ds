@@ -1,0 +1,4 @@
+1...find the length of linkedlist and find the middle element---O(n+n/2)--O(n)
+      and traverse through that element and return it
+2..second approach is a bit faster.take two pointers slow and fast--O(n/2+n/2)--O(n)
+     by the time fast reaches end of linked list then slow points to middle element

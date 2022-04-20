@@ -1,0 +1,4 @@
+1..the first approach is non recursive approach---O(n)  space--O(1)
+         take three pointers like prev,temp,temp1 and do it
+2..second approach is recursive approach --O(n)  space--O(n)
+        take two pointers like head and newhead and do it

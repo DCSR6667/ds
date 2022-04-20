@@ -1,0 +1,29 @@
+this problem can be solve by using finding loop concepts
+
+1...take a empty set and two pointers curr=head and prev=None--O(n)--space---O(n)
+      
+        while curr:
+            if curr not in s:
+                s.add(curr)
+                prev=curr
+                curr=curr.next
+                
+            else:
+                break
+        prev.next=None
+
+2....first use two pointers slow and fast and find loop after that follow below procedure--O(n)--space--O(1)*
+         
+            if slow is head:
+                while fast.next!=slow:
+                    fast=fast.next
+                fast.next=None
+            elif slow is fast:
+                slow=head
+                while slow.next!=fast.next:
+                    slow=slow.next
+                    fast=fast.next
+                fast.next=None
+
+          
+     

@@ -1,0 +1,29 @@
+****in this problem we will not compare data we will compare entire nodes
+1...the first approach is brute force approach---O(m*n)
+    we will take one node and compare the address  of the another node
+
+2..first we will take one linked list and store  all the nodes in a set data structure--O(m+n)--space--O(n)
+   now we will traverse through another linked list and we will check if node is available in set or not
+         if it is available then return it
+3..first we will find lengths of two linked lists simulatnneously---O(m+m-n+n)--O(2m)---space--O(1)
+   if countA>countB:
+            diff=countA-countB
+            temp1=headA
+            temp2=headB
+            i=0
+            while i<diff:
+                temp1=temp1.next
+                i+=1
+        else:
+            diff=countB-countA
+            temp1=headA
+            temp2=headB
+            i=0
+            while i<diff:
+                temp2=temp2.next
+                i+=1
+    while temp1 and temp2:
+            if temp1 is temp2:
+                return temp1
+            temp1=temp1.next
+            temp2=temp2.next

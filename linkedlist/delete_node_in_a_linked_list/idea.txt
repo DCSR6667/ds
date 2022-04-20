@@ -1,0 +1,2 @@
+1...u are given a node to be deleted--O(1)
+     the idea is copy the value of next element of node  and the delete the next element of node

@@ -1,0 +1,33 @@
+1....the first idea is normal approach that is two pointers approach--O(m+n)--space-O(m+n)
+2..it is same as first approach but we didnt use extra space---O(m+n)---space--O(1)
+    here we will create a dummy node and we will apply same logic
+     res=ListNode(0)
+     temp=res
+     while list1 and list2:
+            if list1.val<list2.val:
+                temp.next=list1
+                temp=temp.next
+                list1=list1.next
+            else:
+                temp.next=list2
+                temp=temp.next
+                list2=list2.next
+        if list1:
+            temp.next=list1
+        else:
+            temp.next=list2
+        return res.next
+
+
+
+
+3...the third approach will take O(m+n)---space--O(1)
+     rules..........
+       1*** before going to the iteration we want make sure that l1 points to smaller element than l2
+           and l2 points to greater element than l1
+       2**on every iteration we will make 
+            temp=None					
+            while list1 and list1.val<=list2.val:
+                temp=list1
+                list1=list1.next
+            temp.next=list2

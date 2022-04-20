@@ -1,0 +1,9 @@
+1...take two pointers temp and temp1 and a set data structure--O(n)--spaace--O(n)
+      while temp1:
+            if temp1.data not in s:
+                s.add(temp1.data)
+                temp=temp1
+                temp1=temp1.next
+            else:
+                temp.next=temp1.next
+                temp1=temp.next

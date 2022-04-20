@@ -1,0 +1,16 @@
+1...the first approach is---O(kn)---O(1) 
+       we want to take last element and it should be inserted in first position--this should be
+         repeated k times
+      
+      in this above approach  if we modify k=k%len then--O(n+n(k%len))--O(n(k%len))
+
+
+
+
+
+2...1 first find the length of linked list---O(n+n-(k%l))--O(n)--space--O(1)
+    2 make it as circular linked list
+    3 k=k%len and pos=len-k
+    4 now go to that position change head and cut the link
+ 
+    

@@ -1,0 +1,10 @@
+1...take a set and traverse through the linked list  and check ---O(n)--space--O(n)
+          if node is  available in set then return true
+          if node is not available in set then add it to the set
+    this process is until temp is not None if temp is None then return False
+
+2..take two pointers they are slow and fast pointers--O(n)--space--O(1)
+       slow move by 1 unit and fast move by 2 units
+       if slow==fast then return True 
+          this process is continued until fast is not None.if fast is None then return False
+       

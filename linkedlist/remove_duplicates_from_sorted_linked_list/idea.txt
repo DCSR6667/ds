@@ -1,0 +1,6 @@
+1...take two pointers like temp,temp1---O(n)---space--O(1)
+         if temp.data==temp1.data then delete temp1
+          else:
+              temp=temp.next and temp1=temp1.next
+this is continued until temp1 is not None
+   
