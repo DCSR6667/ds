@@ -1,0 +1,17 @@
+1..this question can be solved by two pointers approach --O(n)
+    in this we gonna take temp1 and temp2 as pointers
+
+
+    if head is None:
+            return head
+        temp1,temp2=head,head.next
+        while temp2:
+            if temp1.val==temp2.val:
+                temp1.next=temp2.next
+                temp2=temp2.next
+            else:
+                temp1=temp2
+                temp2=temp2.next
+        return head
+        
+   

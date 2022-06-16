@@ -1,0 +1,15 @@
+1..the first appraoch is brute force approach---O(n2)
+   in this we will take two loops 
+   and we will claculate area and we will update maxarea based on some logic
+
+2..the second approach is two pointers approach--O(n)
+   we will take two pointers l,h=0,end
+       while l<h:
+            area=(h-l)*min(height[l],height[h])
+            if area>maxarea:
+                maxarea=area
+            if height[l]<height[h]:
+                l+=1
+            else:
+                h-=1
+        return maxarea

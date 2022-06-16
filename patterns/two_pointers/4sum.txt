@@ -1,0 +1,26 @@
+1---the first approach is use 4 loops and try to solve it---O(n4)
+2....a+b+c+d=target then d=target-a-b-c this is the idea---O(n3) and space is O(n)
+      we will take a empty set 
+      we will traverse every element of nums(by two loops) and check c is available in set
+          if available return true
+          if not available then add the element 
+
+3----first sort the array---------O(n3) and space--O(1)
+         take 3 pointers i,j,l,h with 3 loops
+         l=i+1,h=len(arr)-1
+                  while l<h:
+                    if nums[l]+nums[h]+nums[i]+nums[j]==target:
+                        lis.append([nums[i],nums[j],nums[l],nums[h]])
+                        l+=1
+                        h-=1
+                    elif nums[l]+nums[h]+nums[i]+nums[j]>target:
+                        h-=1
+                    else:
+                        l+=1
+          
+
+      
+
+            ****but be careful while dealing with duplicates(difficult)--we can avoid the duplicates by sorting the array and applying some logic
+
+       

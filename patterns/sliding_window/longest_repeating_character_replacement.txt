@@ -1,0 +1,19 @@
+1..This can be solved by sliding window  pattern----O(n)----O(1)
+
+
+   valid window-->no of replacements{(r-l+1)-max(count.values())} is <=k
+   invalid window-->no of replacements{(r-l+1)-max(count.values())} is >k
+   take res,l,r, count(dictionary)variables 
+   
+   if valid window 
+     update count +1
+     update res
+     r++
+  else
+     update count  -1
+      l--
+     
+    
+     
+   
+   

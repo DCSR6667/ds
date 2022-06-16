@@ -1,0 +1,31 @@
+1...traverse through the linked list and maintain count variables with the help of count variables
+   we can do it---O(n+n)-O(2n)--O(n)
+
+
+2...    zerod=Node(0)-------O(n)
+        oned=Node(0)
+        twod=Node(0)
+        zero,one,two=zerod,oned,twod
+        temp=head
+        while temp:
+            if temp.data==0:
+                zero.next=temp
+                zero=zero.next
+                temp=temp.next
+            elif temp.data==1:
+                one.next=temp
+                one=one.next
+                temp=temp.next
+            else:
+                two.next=temp
+                two=two.next
+                temp=temp.next
+        
+        if oned.next:
+            zero.next=oned.next
+            one.next=twod.next
+            two.next=None
+        else:
+            zero.next=twod.next
+            two.next=None
+        head=zerod.next

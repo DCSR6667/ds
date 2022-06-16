@@ -1,0 +1,5 @@
+1...this question can be solved easily if u know how to find middle element of the linked list 
+    we can find middle element in two ways so by using those 2 ways we can solve this question
+    1 approach---O(n+n/2+n/2)--O(2n)--O(n)
+    2 approach---O(n/2+n/2)---O(n) 
+     

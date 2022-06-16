@@ -1,0 +1,1 @@
+1...the idea is just swap the prev and next links for every node---O(n)

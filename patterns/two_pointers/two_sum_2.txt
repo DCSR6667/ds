@@ -1,0 +1,12 @@
+1.in this we will given a sorted array---O(n)--space--O(1)
+   this problem can be solved by two pointers approach 
+     
+    l,h=0,len(numbers)-1
+        while l<h:
+            if numbers[l]+numbers[h]==target:
+                return [l+1,h+1]
+            elif numbers[l]+numbers[h]>target:
+                h-=1
+            else:
+                l+=1
+                

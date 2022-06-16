@@ -3,14 +3,10 @@
     here we will take 2 pointers as target,current number 
    logic sum=a+b==> b=sum-a
    
-
    if target-nums[i] in d.keys():
                 return [i,d[target-nums[i]]]
             else:
-                d[nums[i]]=i 
-
-
-          
+                d[nums[i]]=i
 
 3..the third approach is first we will sort the array an we will use two pointers approach
     this will take O(nlogn) if it is non sorted array.O(n) if it is sorted array
@@ -24,5 +20,4 @@
     else:
         l++
 
-    
-       
+        

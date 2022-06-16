@@ -1,0 +1,16 @@
+1...this question can be solved by  using two pointers approach---O(n)
+    take two pointers and u can do it
+
+       temp1,temp2=None,head
+        while temp2:
+            if temp2.val==val and temp2 is head:
+                head=head.next
+                temp2.next=None
+                temp2=head
+            elif temp2.val==val:
+                temp1.next=temp2.next
+                temp2=temp2.next
+            else:
+                temp1=temp2
+                temp2=temp2.next
+        return head

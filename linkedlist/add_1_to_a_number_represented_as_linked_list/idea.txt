@@ -1,0 +1,17 @@
+1...first reverse the linked list----O(n)
+  then mainly we have 3 conditions
+   while temp and flag:
+            if temp.data==9 and temp.next is None:
+                temp.data=1
+                newnode=Node(0)
+                newnode.next=head
+                head=newnode
+                temp=temp.next
+            elif temp.data==9:
+                temp.data=0
+                temp=temp.next
+            else:
+                temp.data=temp.data+1
+                flag=False
+then reverse the linked list and return the head
+    

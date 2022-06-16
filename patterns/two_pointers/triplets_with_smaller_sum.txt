@@ -1,0 +1,17 @@
+1---the first approach is use 3 loops and try to solve it---O(n3)
+2..second approach is two pointers approach----O(n2)--space-->O(1)
+    
+
+        count=0
+        arr.sort()
+        for i in range(len(arr)-2):
+            l=i+1
+            h=len(arr)-1
+            while l<h:
+                if arr[l]+arr[h]+arr[i]<sumo:
+                    count+=(h-l)
+                    l+=1
+                else:
+                    h-=1
+        return count
+   

@@ -1,0 +1,5 @@
+2..this can be solved by two pointers approach but the problem we cant traverse back(because of SLL) that why
+
+   we will   find the mid element---O(n/2+n/2+n/2)--O(n)--space--O(1)
+    and we will  reverse the right part of mid element
+    and then now we will apply two pointers logic

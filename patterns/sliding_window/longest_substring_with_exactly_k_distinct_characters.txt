@@ -1,0 +1,5 @@
+this is solved by using sliding window----O(n)
+it is exactly same as friuts into basket question (or)
+longest substring with atmost k distinct characters question with small difference
+that is in this we will update the max_len if and only if
+len(dict)==k  --->this implies that given substring contains exactly k distinct characters

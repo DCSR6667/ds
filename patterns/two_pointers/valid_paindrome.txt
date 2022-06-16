@@ -1,0 +1,14 @@
+1.it is the general approach---O(n)--space--O(n)
+   if reverse==original then palindrome otherwise not a palindrome 
+
+2.second approach is two pointers approach --O(n)  space===>O(1)
+  i=0 and j=end of array 
+  
+while i<j:
+if s[i]!=s[j]:
+         return False
+  i+=1
+  j-=1
+
+return true
+ 

@@ -1,0 +1,35 @@
+1...we gonna take two new empty strings those may contain modified--O(n)--space--O(n)
+   values (without back spaces and  some characters )
+   now we will compare new strings and return result 
+  
+
+2.take two pointers i,j those  will point the end of the strings--O(n)--space--O(1)
+  and take two variables counts and countt which represents no of hashes 
+ 
+     while i>=0 or j>=0:
+            while i>=0:
+                if s[i]=='#':
+                    counts+=1
+                    i-=1 
+                elif counts>0:
+                    counts-=1
+                    i-=1
+                else:
+                    break
+           
+        
+            while j>=0:
+                if t[j]=='#':
+                    countt+=1
+                    j-=1 
+                elif countt>0:
+                    countt-=1
+                    j-=1
+                else:
+                    break
+            if i>=0 and j>=0 and s[i]!=t[j]: comparision of two chars 
+                return False
+            if (i>=0)!=(j>=0): comparision of char and empty space 
+                return False
+            i-=1
+            j-=1

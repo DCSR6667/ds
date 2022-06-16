@@ -1,0 +1,14 @@
+1...the first approach is nothing but a brute force approach----O(n2)
+2...sliding window pattern---O(n)
+take l,total,res variables
+    for r in range(len(nums)):
+            total+=nums[r]
+            while total>=target:---->it will execute only once[prevent r++]
+                res=min(res,r-l+1)
+                total-=nums[l]
+                l+=1
+        if res==math.inf:
+            return 0
+        else:
+            return res
+   

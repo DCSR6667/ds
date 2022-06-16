@@ -1,0 +1,16 @@
+1...this can be solved by sliding window pattern---O(n)---O(1)
+      
+     
+        l,r=0,0
+        max_len=0
+        dict={}
+    add every element into dict along with indexes and update max_len
+      ***but whenever len of dict is >=3  --->importtant step 
+         then
+         we want to delete key-val pair in dict
+         we want to update l
+
+
+****this question is similar to longest substring with atmost k distinct characters
+         
+      

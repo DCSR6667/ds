@@ -1,0 +1,4 @@
+1.this is same as merge sort---O(nlogn)
+   in this we will use fast and slow pointers inorder to do divide 
+    an linked list into two halves
+  

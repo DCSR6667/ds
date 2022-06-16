@@ -8,8 +8,8 @@
 3----first sort the array---------O(n2) and space--O(1)
          take 3 pointers i,l,h with 2 loops
          l=i+1,h=len(arr)-1
-
-            if a[l]+a[h]+a[i]=target 
+   
+              if a[l]+a[h]+a[i]=target 
                  return true
               if a[l]+a[h]+a[i]>target
                   h--
@@ -17,6 +17,6 @@
                   l++
       
 
-            ****but be careful while dealing with duplicates(difficult)
+            ****but be careful while dealing with duplicates(difficult)--we can avoid the duplicates by sorting the array and applying some logic
 
        

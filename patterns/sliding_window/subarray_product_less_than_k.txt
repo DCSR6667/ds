@@ -1,0 +1,17 @@
+1..it is a sliding window problem-----O(n)
+  
+   **in this we will predict no of subarrays by sliding window length
+       that is r-l+1
+  
+    at first we will upadate prod and we will update count
+    whenever prod>=k then we will remove left most ele fro prod and we will inc l+=1
+    
+
+       while r<len(nums):
+            prod*=nums[r]
+            while prod>=k:
+                prod/=nums[l]
+                l+=1
+            
+            count+=r-l+1
+            r+=1

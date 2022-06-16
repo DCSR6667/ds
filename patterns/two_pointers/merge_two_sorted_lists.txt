@@ -1,0 +1,2 @@
+1.this problem can be solved by using 2 pointers pattern---->O(n)
+  we can done in O(n) or O(1) space
