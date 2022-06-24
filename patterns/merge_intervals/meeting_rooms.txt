@@ -1,0 +1,5 @@
+1...first sort the list based on start index---O(nlogn)--space--O(1)
+   take two pointers and do it
+   
+
+     logic---end>start then overlapping occurs

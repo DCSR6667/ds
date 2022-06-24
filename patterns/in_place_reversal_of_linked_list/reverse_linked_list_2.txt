@@ -1,0 +1,6 @@
+  create a dummy node which points to head(when u feel problem with head logic
+then use dummy node or whenever u want to eliminate multiple edge cases then create a  dummy node)--O(n)--space--O(1)
+
+  1.reach node at position left
+  2.reverse from left to right
+  3.update pointers 

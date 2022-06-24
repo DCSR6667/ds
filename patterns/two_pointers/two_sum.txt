@@ -1,5 +1,5 @@
 1..the first approach is brute-force approach ---O(n2)
-2...two pointers approach--O(n)--space-O(n)
+2...hashmap approach--O(n)--space-O(n)
     here we will take 2 pointers as target,current number 
    logic sum=a+b==> b=sum-a
    

@@ -1,0 +1,13 @@
+1..take 3 pointers  and we can do it
+it will take--O(n)--space--O(1)
+
+class Solution:
+    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        prev=None
+        temp=head
+        while head:
+            head=head.next
+            temp.next=prev
+            prev=temp
+            temp=head
+        return prev

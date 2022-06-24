@@ -1,0 +1,17 @@
+1...first sort the list based on start index---O(nlogn)--space--O(1)
+   take two pointers and do it
+   
+
+     logic----------------------------------------
+      there are three cases
+       1.merged case
+       2.non-merged case
+       3.non-merged case
+  the first two cases are easy to think
+  third case is tricky
+     
+
+     
+
+         
+     

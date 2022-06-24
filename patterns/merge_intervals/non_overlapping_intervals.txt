@@ -1,0 +1,19 @@
+1...first sort the list based on start index---O(nlogn)--space--O(1)
+   take two pointers  and do it
+   
+
+     logic----------------------------------------
+        end>=start then overlapping occurs
+      
+    the idea is very simple whenever an overlapp exists then
+    remove the interval with max end so that  interval may not overlap with 
+    other intervals
+ 
+      1........   2..........
+      
+            3.......      
+     whenever 1 and 3 overlaps then remove 3 so that it may not overlap 
+      with 2
+      
+     in this we generally wont remove the interval.we will use 
+      prevend variable and we will do it 

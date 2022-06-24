@@ -1,0 +1,10 @@
+1...first sort the list based on start index---O(nlogn)--space--O(1)
+   take two pointers and use extra varaiable res and do it
+   
+
+     logic----------------------------------------
+        end>=start then overlapping occurs
+      res=[1,4] i=[2,7]
+      mergeinterval=[res[0],max(res[1],i[1])]
+         
+     

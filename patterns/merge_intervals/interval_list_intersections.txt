@@ -1,0 +1,10 @@
+1...first sort the list based on start index---O(nlogn)--space--O(1)
+   take two pointers and  and do it
+   
+
+     logic----------------------------------------
+        l1[end]>=l2[start] and l1[start]<=l2[end]  then overlapping occurs
+      res=[1,4] i=[2,7]
+      mergeinterval=[max(l[start],l2[start]),min(l1[end],l2[end])]
+         
+     

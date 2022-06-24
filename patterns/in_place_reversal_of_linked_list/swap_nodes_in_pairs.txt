@@ -1,0 +1,19 @@
+take 4 pointers and do it--O(n)--space--O(1)
+whenever u want to eliminate multiple edge cases then create a  dummy node
+
+
+class Solution:
+    def swapPairs(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        dummy=ListNode(0,head)
+        prev,curr=dummy,head
+        while curr and curr.next:
+            second=curr.next
+            nxt=curr.next.next
+            
+            second.next=curr
+            curr.next=nxt
+            prev.next=second
+            
+            prev=curr
+            curr=nxt
+        return dummy.next

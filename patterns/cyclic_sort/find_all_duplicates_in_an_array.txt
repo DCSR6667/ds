@@ -1,0 +1,4 @@
+1..this can be solved by cylic sort pattern--O(n)--space-O(1)
+   
+  1.first apply cyclic sort
+  2.traverse an array and find out ans
