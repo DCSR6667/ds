@@ -1,0 +1,10 @@
+1.this can be done by binary search pattern--O(logn)
+pivot is nothing but largest element in rotated sorted array
+minimum element is nothing but nums[pivot+1]
+    
+        p=self.pivot(nums)
+        if p==-1:
+            return nums[0]
+        return nums[p+1]
+        
+

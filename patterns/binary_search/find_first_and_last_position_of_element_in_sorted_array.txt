@@ -1,0 +1,6 @@
+1. this can be solved by binary search pattern---O(logn)
+
+   idea behind is perform binary search by two times
+   
+   first time left binary search
+   second time right position

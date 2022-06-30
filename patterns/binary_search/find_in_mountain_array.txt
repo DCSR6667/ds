@@ -1,0 +1,13 @@
+1..this can be solved by binary search pattern--O(logn)
+find peak element
+perform left binary search
+perform right binary search
+
+
+
+        peak=self.peakindex(mountain_arr)
+        first=self.binarysearch(mountain_arr,0,peak,target)
+        if first!=-1:
+            return first
+        else:
+            return self.binarysearch(mountain_arr,peak+1,mountain_arr.length()-1,target)

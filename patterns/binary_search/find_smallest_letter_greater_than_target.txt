@@ -1,0 +1,2 @@
+1.it is same as ceiling of a number with small change----O(logn)
+ here we use binary search pattern

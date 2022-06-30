@@ -1,0 +1,12 @@
+1..the first approach is pointers apprach--O(n)
+2..second approach is  by using binary search pattern---O(logn)
+
+       def peakIndexInMountainArray(self, arr: List[int]) -> int:
+        start,end=0,len(arr)-1
+        while start<end:
+            mid=start+(end-start)//2
+            if arr[mid]>arr[mid+1]:
+                end=mid
+            else:
+                start=mid+1
+        return start
