@@ -1,0 +1,11 @@
+1...this can be done by bit manuplation--O(logn)
+    res=0
+    take last element and  add to the res(adding can be done by using mask)
+
+       def reverseBits(self, n: int) -> int:
+        res=0
+        for i in range(32):
+            last=(n>>i) & 1
+            res=res | (last<<(31-i))
+        return res
+            

@@ -1,0 +1,5 @@
+1..first appraoch is bit manuplation---O(logn)
+   traverse through the bits and maintain count if it is 1
+
+2..second appraoch is bit manuplation--O(no of 1 bits)
+    delete right most set bit by n&(n-1) and maintain count
