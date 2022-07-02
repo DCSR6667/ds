@@ -1,3 +1,5 @@
+    searching in matrix---->tyr to eliminate the search space
+
 1...perform linear search on the matrix it will take ---O(m*n)
 2..take one row of matrix and perform binary search repeat this procedure---O(mlogn)
 3..in the question they given elements are sorted from row wise and column wise so we use this concept--O(m+n)

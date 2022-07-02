@@ -1,3 +1,2 @@
-1...use dict and maintain frequency--O(n)
+1...use dict and maintain frequency--O(n)--space--O(n)
 2...bit manipulation---a^a=0  a^0=a-----O(n)
-3...use set fun and  subtract sums---O(n)

@@ -1,5 +1,19 @@
-1...use dict and maintain count---o(n2)
-2...use sort function and solve--o(nlogn)
-3..take two variables slow and fast and move slow by nums[slow] and move fast by nums[nums[fass]] until they collide
-after they collide move fast to nums[0] and move slow by nums[slow] and move fast by nums[fast] until they collide.
-at the point they collide is the duplicate number
+
+1..sort the array and use two pointers approach---O(nlogn)--space--O(1)
+
+2..use hash set---O(n)--space--O(n)
+
+        s=set()
+        for i in nums:
+            if i not in s:
+                s.add(i)
+            else:
+                return i
+
+3..we can convert this problem to start position of cycle
+     in linked list problem---O(n)--space--O(1)
+        
+ 4..this can be done by using cyclic sort pattern--O(n)
+    
+   1.first perform cyclic sort
+   2.traverse through the array and do it
