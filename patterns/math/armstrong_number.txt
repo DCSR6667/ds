@@ -1,0 +1,2 @@
+1..sum of cubes of digits is equal to original number 
+     then we can say it as armstrong number--O(logn)-space-O(1)

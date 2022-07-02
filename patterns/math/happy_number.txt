@@ -1,0 +1,51 @@
+1...in this question there exists a loop so we can do it 
+    by using slow and fast pointers----O(n)--space--O(1)
+    
+
+      def square(self,n):
+        sum=0
+        while n>0:
+            sum=sum+(n%10)**2
+            n=n//10
+        return sum
+
+    def isHappy(self, n: int) -> bool:
+        slow,fast=n,n
+        while True:
+            slow=self.square(slow)
+            fast=self.square(self.square(fast))
+            if slow==fast:
+                break
+        return slow==1
+
+
+2...the second method is hashset method--it will take extra space--O(n)--space-O(n)
+  
+
+     def square(self,n):
+        sum=0
+        while n>0:
+            sum=sum+(n%10)**2
+            n=n//10
+        return sum
+    def isHappy(self, n: int) -> bool:
+        sum=n
+        s=set()
+        
+        while sum!=1:
+            sum=self.square(sum)
+            if sum not in s:
+                s.add(sum)
+            else:
+                return False
+        return True
+                
+
+
+
+
+
+
+
+
+
