@@ -1,0 +1,15 @@
+1..the first approach is general approach--O(n)--space--O(n)
+2..second approach--O(n)--space--O(1)
+   in this we will use a count varaiable and we will do it
+
+     def kthFactor(self, n: int, k: int) -> int:
+        i=1
+        count=0
+        while i<=n:
+            if n%i==0:
+                count+=1
+            if count==k:
+                return i
+            i+=1
+        
+        return -1

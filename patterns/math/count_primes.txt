@@ -1,0 +1,5 @@
+1...the first approach is same as prime number----O(n*sqrt(n))
+2..it will take --O(sqrt(n)*log(log(n))--space--O(n)
+
+ in this we will  take an array which indicates prime number or not
+ idea--if a number is prime then we will mark all of its multiples as not prime
