@@ -1,0 +1,2 @@
+1..the first method is using while loop---O(n)--space--O(1)
+2..second method is using recursion--O(n)--space--O(n)
