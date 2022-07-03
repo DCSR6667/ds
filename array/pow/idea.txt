@@ -1,5 +1,8 @@
 1...use a loop and do it O(n)
-2...using recursion ----O(n)
+        while nn>0:
+            ans=ans*x
+            nn=nn-1
+2...using recursion ----O(n)--space--O(n)
        if n==0
          return 1
        else
