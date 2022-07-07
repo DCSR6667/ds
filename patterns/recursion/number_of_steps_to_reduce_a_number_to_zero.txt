@@ -1,0 +1,12 @@
+1..this problem can be solved by using recursion
+
+       def numberOfSteps(self, n: int) -> int:
+        count=0
+        if n==0:
+            return 0
+        if n%2==0:
+            count+=1
+            return count+self.numberOfSteps(n//2)
+        else:
+            count+=1
+            return count+self.numberOfSteps(n-1)
