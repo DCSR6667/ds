@@ -2,5 +2,5 @@
 
    idea behind is perform binary search by two times
    
-   first time left binary search
-   second time right position
+   first time to get first element
+   second time to get last element

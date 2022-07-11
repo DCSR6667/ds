@@ -1,10 +1,10 @@
 1...this problem can be solved by sliding window pattern--O(n)---space--O(n)
-    inorder to identify a duplicate we use hashmap
+    inorder to identify a duplicate we use hashset
     l=0
     if no duplicate:
      update len and r+=1
     else:
      l-=1--->shirk window length
-     remove ele from hashmap
+     remove ele from hashset
 
     
