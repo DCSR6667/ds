@@ -1,4 +1,4 @@
-'''this can be solved by subset pattern (taking or not taking)'''
+'''this can be done by subset pattern--(processing/unprocessing)'''
 def iterative_subseq(arr):
     outer=[[]]
     for num in arr:

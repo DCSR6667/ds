@@ -1,3 +1,4 @@
+'''this can be done by subset pattern--(processing/unprocessing)'''
 def subseq(ans,s):
     if len(s)==0:
         print(ans)

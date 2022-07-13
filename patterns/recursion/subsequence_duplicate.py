@@ -1,4 +1,4 @@
-'''this can be solved by subset pattern (taking and not taking)
+'''this can be done by subset pattern--(processing/unprocessing)
     but whenever duplicate number exists then add it to the 
     previous added elements in nested list '''
 def iterative_subseq(arr):
