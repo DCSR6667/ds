@@ -1,3 +1,4 @@
+'''this problem can be solved by subset pattern'''
 def allpaths(ans,r,c,maze):
     if r==len(maze)-1 and c==len(maze[0])-1:
         print(ans)
