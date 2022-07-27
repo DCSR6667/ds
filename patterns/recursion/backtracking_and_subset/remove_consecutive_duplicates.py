@@ -1,12 +1,13 @@
-def remove(s,i,l):
+#subset pattern(processed/unprocessed)
+def remove(l,s,i):
     if i==len(s)-1:
         l=l+s[i]
         return l
     if s[i]!=s[i+1]:
         l=l+s[i]
-    return remove(s,i+1,l)
+    return remove(l,s,i+1)
 
-#without any space
+ 
 def remove1(s):
     if len(s)<=1:
         return s

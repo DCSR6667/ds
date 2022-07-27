@@ -5,7 +5,6 @@ def iterative_subseq(arr):
         i=0
         size=len(outer)
         while i<size:
-            print('hi')
             l=outer[i].copy()
             l.append(num)
             outer.append(l)

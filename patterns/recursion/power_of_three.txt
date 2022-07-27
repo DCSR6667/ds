@@ -1,0 +1,12 @@
+1...dividing approach--O(logn)
+    
+   this can be done by recursive and iterative
+
+2..bit manipulation--O(1)
+
+3..mathematical approach--O(1)
+
+      def isPowerOfThree(self, n: int) -> bool:
+        if n==0:
+            return False
+        return (math.log(n,3))%1==0
