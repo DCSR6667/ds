@@ -1,0 +1,2 @@
+1..this problem can be solved by subset pattern
+  and it involves backtracking

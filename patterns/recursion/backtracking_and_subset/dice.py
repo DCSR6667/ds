@@ -1,10 +1,12 @@
+'''this can be done by subset pattern
+     permutation sum '''
 def dice(ans,target,face):
     if target==0:
         print(ans)
         return 
     i=1
     while i<=face and i<=target:
-        dice(ans+str(i),target-i)
+        dice(ans+str(i),target-i,face)
         i+=1
 
 def dice1(ans,target,face):

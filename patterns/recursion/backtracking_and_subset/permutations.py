@@ -1,4 +1,5 @@
 '''this can be done by subset pattern--(processing/unprocessing)'''
+'''second approach is by swaping and backtracking approach'''
 def permutation(ans,s):
     if len(s)==0:
         print(ans)
@@ -37,5 +38,21 @@ def permutation2(ans,s,l):
         permutation2(first+ch+last,s[1:],l)
     return l
 print(permutation2("","abc",[]))
+
+
+class Solution:
+    def arrange(self,nums,i,l):
+        if i==len(nums):
+            l.append(nums.copy())
+            return l
+        for j in range(i,len(nums)):
+            nums[i],nums[j]=nums[j],nums[i]
+            self.arrange(nums,i+1,l)
+            nums[i],nums[j]=nums[j],nums[i]
+        return l
+            
+    def permute(self, nums: List[int]) -> List[List[int]]:
+        return self.arrange(nums,0,[])
+        
 
 
