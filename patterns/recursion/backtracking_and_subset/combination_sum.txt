@@ -1,0 +1,6 @@
+1..this can be solved by subset pattern
+  
+it is like permutation sum(dice problem)--without duplicates
+
+  inorder to eliminate duplicates----we will follow taking and not taking principles
+ 
