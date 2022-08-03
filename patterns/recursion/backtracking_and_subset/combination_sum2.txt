@@ -1,0 +1,6 @@
+1...this question can be solved by subset pattern
+ 
+  in this we have to check two conditions
+  1....take care of duplicates(using prev)
+  2..Each number in candidates may only be used once in the combination.
+  based on this condition do it(i+1)

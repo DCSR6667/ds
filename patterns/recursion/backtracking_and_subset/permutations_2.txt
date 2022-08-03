@@ -1,0 +1,2 @@
+1...it is same as permutation question(without duplicates)
+ here we can eliminate duplicates by using hash set
