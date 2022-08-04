@@ -1,4 +1,22 @@
 '''this can be done by subset pattern--(processing/unprocessing)'''
+
+def letterCombinations(self, digits):
+    res=[]
+    d_c={"2":"abc","3":"def","4":"ghi","5":"jkl",
+        "6":"mno","7":"pqrs","8":"tuv","9":"wxyz"}
+    def back_track(i,p):
+        if i>len(digits)-1:
+            res.append(p)
+            return
+        for c in d_c[digits[i]]:
+            back_track(i+1,p+c)
+        return
+    if digits:
+        back_track(0,"")
+    return res
+
+
+
 def phone(ans,s):
     if len(s)==0:
         print(ans)
