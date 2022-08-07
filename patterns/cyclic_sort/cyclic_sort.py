@@ -8,7 +8,7 @@ def cyclic_sort(nums):
     i=0
     while i<len(nums):
         pos=nums[i]-1
-        if i!=pos:
+        if nums[i]!=nums[pos]:
             nums[i],nums[pos]=nums[pos],nums[i]
         else:
             i+=1
