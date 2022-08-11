@@ -1,7 +1,7 @@
-'''In the first approach creation of heap takes O(nlogn)  but we can reduce
- to O(nlogk)---dont know
-
- In the second approach creation of heap takes O(nlogk)
+'''Building a binary heap will take O(nlogk) time with Heapify().
+When we add the elements in a heap one by one and keep satisfying the heap property (max heap or min heap)
+ at every step, then the total time complexity will be O(nlogn)
+. Because the general structure of a binary heap is of a complete binary tree.
  '''
 
 ## time--O(logn)
@@ -85,7 +85,7 @@ print (heapq.heappop(li))
 print ("The popped item using heappushpop() is : ",end="")
 print (heapq.heappushpop(li, 2))
   
-# using heapreplace() to push and pop items simultaneously
+# using heapreplace() to pop and push items simultaneously
 # pops 3
 print ("The popped item using heapreplace() is : ",end="")
 print (heapq.heapreplace(li, 2))

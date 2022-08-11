@@ -1,0 +1,11 @@
+1..the first approach is by using sort fun--O(nlogn)
+2..second approach is by using heap
+     heapify method---O(nlogk+klogn)
+          (or)
+     (largest element--use min heap-----time--O(nlogk)--space--O(k)
+     smallest element--use max heap
+       and we will restrict the size of heap so that 
+        insert--O(logk) and delete--O(logk)
+        and the size of heap will be--O(k))
+           
+3..third approach is by  quickselect(quicksort by some limitation)--O(n) as average case
