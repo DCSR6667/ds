@@ -1,0 +1,9 @@
+1..this problem can be solved by using heap
+ 
+   heapify method---O(nlogk+klogn)----space--O(n)
+          (or)
+     (largest element--use min heap-----time--O(nlogk)--space--O(k)
+     smallest element--use max heap
+       and we will restrict the size of heap so that 
+        insert--O(logk) and delete--O(logk)
+        and the size of heap will be--O(k))
