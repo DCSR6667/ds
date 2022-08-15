@@ -4,11 +4,12 @@
 
      logic----------------------------------------
       there are three cases
-       1.merged case
-       2.non-merged case
-       3.non-merged case
-  the first two cases are easy to think
-  third case is tricky
+       1.non-merged case---add newinterval at first
+       2.merged case
+       3.non-merged case--add newinterval at last
+ 
+ 
+
      
 
      
