@@ -1,0 +1,29 @@
+1..this problem can be solved by merge intervals pattern--O(nlogn)--space--O(n)
+
+        res,count=0,0
+        start=sorted([i.start for i in intervals])
+        end=sorted([j.end for j in intervals])
+        i,j=0,0
+        while i<len(intervals):
+            if start[i]<end[j]:
+                count+=1
+                i+=1
+            else:
+                count-=1
+                j+=1
+            res=max(res,count)
+        return res
+
+
+2....second approach is by using heap--O(nlogn+nlogk)--O(k)
+
+       intervals.sort()
+        count=1
+        heap=[intervals[0].end]
+        for start,end in intervals[1:]:
+            if heap[0]<=start: ## here we can say that meeting is over.so we pop it 
+                heapq.heappop(heap)
+            heapq.heappush(heap,end)
+            count=max(count,len(heap))
+        return count
+        
