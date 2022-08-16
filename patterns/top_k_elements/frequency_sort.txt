@@ -1,0 +1,3 @@
+1...this problem can be solved  by heap----O(n+DlogD+DlogD)--space--O(n)
+    D--represents no of distinct characters
+     and we use dict to maintain count

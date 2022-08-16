@@ -4,7 +4,7 @@
           (or)
      (largest element--use min heap-----time--O(nlogk)--space--O(k)
      smallest element--use max heap
-       and we will restrict the size of heap so that 
+       and we will restrict the size of heap  to k so that 
         insert--O(logk) and delete--O(logk)
         and the size of heap will be--O(k))
            
