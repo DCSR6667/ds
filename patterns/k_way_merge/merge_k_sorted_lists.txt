@@ -1,0 +1,13 @@
+1....this problem can be solved by using merge sort----O(nlogk)
+     it is same as merge sort with out any change..k--> represents height of tree
+
+2...this problem can be solved by using heap
+
+
+       heapify method---O(kn)
+          (or)
+     (largest element--use min heap-----time--O(nlogk)--space--O(kn)
+     smallest element--use max heap
+       and we will restrict the size of heap  to k so that 
+        insert--O(logk) and delete--O(logk)
+        and the size of heap will be--O(k))
