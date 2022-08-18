@@ -1,0 +1,10 @@
+1...this problem can be solved by using heap------time--O(k+knlogk)--O(k)
+  
+   in this problem we want to find lowest value of max-min.if we increase the min value
+    then we will get lowest value of max-min
+    
+      (largest element--use min heap
+     smallest element--use max heap
+       **and we will restrict the size of heap  to m so that 
+        insert--O(logm) and delete--O(logm)
+        and the size of heap will be--O(m))
