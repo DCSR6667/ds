@@ -1,3 +1,5 @@
+from binarytree import build,tree
+
 class stack:
     
     def __init__(self):
@@ -26,7 +28,7 @@ class stack:
     
     def peek(self):
         if self.isempty():
-            print("stack is empty we cant get top element")
+            return None
         else:
             return self.l[len(self.l)-1]
         
@@ -67,163 +69,281 @@ class Node:
         self.left=None
         self.value=value
         self.right=None
- 
- 
 
-def insert(root,value):
-    node=Node(value)
+def createbt():
+    val=int(input("enter root value"))
+    root=Node(val)
+    q=queue()
+    q.enqueue(root)
+    while not(q.isempty()):
+        p=q.dequeue()
+        val=int(input(f" enter left child of {p.value}"))
+        if val!=-1:
+            temp=Node(val)
+            p.left=temp
+            q.enqueue(temp)
+        val=int(input(f" enter right child of {p.value}"))
+        if val!=-1:
+            temp=Node(val)
+            p.right=temp
+            q.enqueue(temp)
+    return root
+
+def search(root,data):
     if root is None:
-        root=node
-        return root
-    else:
-        q=queue()
-        q.enqueue(root)
-        while not q.isempty():
-            t=q.dequeue()
-            
-            if t.left is None:
-                t.left=node
-                return
-            else:
-                q.enqueue(t.left)
-            
-            if t.right is None:
-                t.right=node
-                return
-            else:
-                q.enqueue(t.right)
+        return False
+    q=queue()
+    q.enqueue(root)
+    while not(q.isempty()):
+        p=q.dequeue()
+        if p.value==data:
+            return True
+        if p.left is not None:
+            q.enqueue(p.left)
+        if p.right is not None:
+            q.enqueue(p.right)
+    return False
 
+def insert(root,data):
+    if root is None:
+        root=Node(data)
+        return root
+    q=queue()
+    q.enqueue(root)
+    while not(q.isempty()):
+        p=q.dequeue()
+        if p.left is not None:
+            q.enqueue(p.left)
+        else:
+            n=Node(data)
+            p.left=n
+            return root
+            
+        if p.right is not None:
+            q.enqueue(p.right)
+        else:
+            n=Node(data)
+            p.right=n
+            return root
+            
+    return root
+
+def getdeepestnode(root):
+    if root is None:
+        return None
+    q=queue()
+    q.enqueue(root)
+    while not(q.isempty()):
+        p=q.dequeue()
+        if p.left is not None:
+            q.enqueue(p.left)
+        if p.right is not None:
+            q.enqueue(p.right)
+        dnode=p
+    return dnode
+
+def deletedeepestnode(root,dnode):
+    if root is None:
+        return "we cant delete node"
+    if root is dnode:
+        root=None
+        return "success"
+    q=queue()
+    q.enqueue(root)
+    while not(q.isempty()):
+        p=q.dequeue()
+        if p.left is not None:
+            if p.left is dnode:
+                p.left=None
+                return "success"
+            else:
+                q.enqueue(p.left)
+        if p.right is not None:
+            if p.right is dnode:
+                p.right=None
+                return "success"
+            else:
+                q.enqueue(p.right)
+    return "failure"
+
+def delete(root,data):
+    if root is None:
+        return "we cant delete node"
+    q=queue()
+    q.enqueue(root)
+    while not(q.isempty()):
+        root=q.dequeue()
+        if root.value==data:
+            dnode=getdeepestnode(root)
+            root.value=dnode.value
+            deletedeepestnode(root,dnode)
+            return "success"
+        if root.left is not None:
+            q.enqueue(root.left)
+        if root.right is not None:
+            q.enqueue(root.right)
+    return "failure"
+
+def deletebinarytree(root):
+    if root is not None:
+        root=None
+    return root
+    
+
+
+    
 
 def preorder(root):
-    if root is not None:
-        print(root.value,end="-->")
-        preorder(root.left)
-        preorder(root.right)
+    if root is None:
+        return
+    print(root.value,end=" ")
+    preorder(root.left)
+    preorder(root.right)
+
+def preorderiter(root):
+    if root is None:
+        return None
+    p=root
+    s=stack()
+    while not(s.isempty()) or p!=None:
+        if p is not None:
+            print(p.value,end=" ")
+            s.push(p)
+            p=p.left
+        else:
+            p=s.pop()
+            p=p.right
+
 
 def inorder(root):
-    if root is not None:
-        inorder(root.left)
-        print(root.value,end="-->")
-        inorder(root.right)
+    if root is None:
+        return
+    inorder(root.left)
+    print(root.value,end=" ")
+    inorder(root.right)
+
+def inorderiter(root):
+    if root is None:
+        return
+    s=stack()
+    p=root
+    while p!=None or not(s.isempty()):
+        if p!=None:
+            s.push(p)
+            p=p.left
+        else:
+            p=s.pop()
+            print(p.value,end=" ")
+            p=p.right
 
 def postorder(root):
-    if root is not None:
-        postorder(root.left)
-        postorder(root.right)
-        print(root.value,end="-->")
+    if root is None:
+        return
+    postorder(root.left)
+    postorder(root.right)
+    print(root.value,end=" ")
+
+def postorderiter(root):
+    if root is None:
+        return
+    s=stack()
+    p=root
+    while p!=None or not(s.isempty()):
+        if p is not None:
+            s.push(p)
+            p=p.left
+        else:
+            if s.peek().right is None:
+                p=s.pop()
+                print(p.value,end=" ")
+                while s.peek() and p==s.peek().right:
+                    p=s.pop()
+                    print(p.value,end=" ")
+            if not(s.isempty()):
+                p=s.peek().right
+            else:
+                p=None
+
+          
+
+
 
 def levelorder(root):
     if root is None:
-        print("tree is empty")
-    else:
-        q=queue()
-        print(root.value,end="-->")
-        q.enqueue(root)
-        while not q.isempty():
-            p=q.dequeue()
-            if p.left is not None:
-                print(p.left.value,end="-->")
-                q.enqueue(p.left)
-            if p.right is not None:
-                print(p.right.value,end="-->")
-                q.enqueue(p.right)
-            
+        return None
+    q=queue()
+    q.enqueue(root)
+    while not(q.isempty()):
+        p=q.dequeue()
+        print(p.value,end=" ")
+        if p.left is not None:
+            q.enqueue(p.left)
+        if p.right is not None:
+            q.enqueue(p.right)
+
+
 
 def count(root):
     if root is None:
         return 0
-    else:
-        return count(root.left)+count(root.right)+1
+    l=count(root.left)
+    r=count(root.right)
+    return l+r+1
 
 def leafnodes(root):
     if root is None:
         return 0
+    if root.left is None and root.right is None:
+        return leafnodes(root.left)+leafnodes(root.right)+1
     else:
-        if root.left is None and root.right is None:
-            return leafnodes(root.left)+leafnodes(root.right)+1
-        else:
-            return leafnodes(root.left)+leafnodes(root.right) 
+        return leafnodes(root.left)+leafnodes(root.right)
+    
+    
+
+def count2deg(root):
+    if root is None:
+        return 0
+    if root.left and root.right:
+        return count2deg(root.left)+count2deg(root.right)+1 
+    else:
+        return count2deg(root.left)+count2deg(root.right)
+
+def count1deg(root):
+    if root is None:
+        return 0
+    if (root.left and root.right is None) or (root.left is None and root.right):
+        return count1deg(root.left)+count1deg(root.right)+1
+    else:
+        return count1deg(root.left)+count1deg(root.right)
+
 
 def internalnodes(root):
     if root is None:
         return 0
+    if root.left is None and root.right is None:
+        return internalnodes(root.left)+internalnodes(root.right)
     else:
-        if root.left is not None or root.right is not None:
-            return internalnodes(root.left)+internalnodes(root.right)+1
-        else:
-            return internalnodes(root.left)+internalnodes(root.right) 
-
-def degree2nodes(root):
-    if root is None:
-        return 0
-    else:
-        if root.left is not None and root.right is not None:
-            return degree2nodes(root.left)+degree2nodes(root.right)+1
-        else:
-            return degree2nodes(root.left)+degree2nodes(root.right) 
-
-def sum(root):
-    if root is None:
-        return 0
-    else:
-        return sum(root.left)+sum(root.right)+root.value
+        return internalnodes(root.left)+internalnodes(root.right)+1
 
 def height(root):
     if root is None:
+        return -1
+    l,r=height(root.left),height(root.right)
+    if l>r:
+        return l+1
+    else:
+        return r+1
+
+def level(root):
+    if root is None:
         return 0
+    l,r=level(root.left),level(root.right)
+    if l>r:
+        return l+1
     else:
-        if height(root.left)>height(root.right):
-            return height(root.left)+1
-        else:
-            return height(root.right)+1
-    
-def preorderi(root):
-    s=stack()
-    if root is None:
-        print('tree is empty')
-    while root is not None or not s.isempty():
-        if root is not None:
-            print(root.value,end="-->")
-            s.push(root)
-            root=root.left
-        else:
-            p=s.pop()
-            root=p.right
-
-def inorderi(root):
-    s=stack()
-    if root is None:
-        print("tree is empty")
-    else:
-        while root is not None or not s.isempty():
-            if root is not None:
-                s.push(root)
-                root=root.left
-            else:
-                p=s.pop()
-                print(p.value,end="-->")
-                root=p.right
-
-def postorderi(root):
-    s=stack()
-    if root is None:
-        print("tree is empty")
-    else:
-        while root is not None or not s.isempty():
-            if root is not None:
-                s.push(root)
-                root=root.left
-            else:
-                p=s.pop()
-                if p>0:
-                    s.push(-p )
-                    root=p.right
-                else:
-                    print(p.value,end="-->")
-                    root=None
+        return r+1
     
 
-        
 
 
 root=insert(None,10)
@@ -233,35 +353,68 @@ insert(root,40)
 insert(root,50)
 insert(root,60)
 insert(root,70)
-preorder(root)
+insert(root,80)
+print("no of nodes is",count(root))
+print("no of leaf nodes is",leafnodes(root))
+print("no of internal nodes is",internalnodes(root))
+
+print("no of nodes with degree 1 is",count1deg(root))
+print("no of nodes with degree 2 is",count2deg(root))
+print("height of binary tree is",height(root))
+print("level of binary tree is",level(root))
+preorderiter(root)
 print()
-inorder(root)
+inorderiter(root)
 print()
-postorder(root)
-print()
-levelorder(root)
-print()
-print("count",count(root))
-print("leafnodes",leafnodes(root))
-print("internalodes",internalnodes(root))
-print("degree2nodes",degree2nodes(root))
-print("sum",sum(root))
-print("height",height(root))
-preorderi(root)
-print()
-inorderi(root)
-print()
-postorderi(root)
+postorderiter(root)
 
 
 
 
+
+
+#----------------------------------------------------------------------------------
+# List of nodes
+nodes =[3, 6, 8, 2, 11, None, 13]
+  
+# Building the binary tree
+binary_tree = build(nodes)
+print('Binary tree from list :\n',
+      binary_tree)
+  
+# Getting list of nodes from
+# binarytree
+print('\nList from binary tree :', 
+      binary_tree.values)
+
+#-----------------------------------------------------------------------------
+  
+# Create a random binary 
+# tree of any height
+root = tree()
+print("Binary tree of any height :")
+print(root)
+  
+# Create a random binary 
+# tree of given height
+root2 = tree(height = 2)
+print("Binary tree of given height :")
+print(root2)
+  
+# Create a random perfect 
+# binary tree of given height
+root3 = tree(height = 2,
+             is_perfect = True)
+print("Perfect binary tree of given height :")
+print(root3)
+
+
+#------------------------------------------------------------------------------------------
 
             
+ 
+ 
 
-
-    
-    
        
        
 
