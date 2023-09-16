@@ -2,3 +2,8 @@
    
   1.first apply cyclic sort
   2.traverse an array and find out ans
+
+
+2..we can do it in another way like mainting frequency of elements in dictonary
+and then traversing
+time---O(n)---space---O(n)
