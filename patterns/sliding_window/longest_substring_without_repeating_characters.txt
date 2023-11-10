@@ -1,10 +1,24 @@
-1...this problem can be solved by sliding window pattern--O(n)---space--O(n)
+1...this problem can be solved by sliding window pattern--O(n+n)---space--O(n)
     inorder to identify a duplicate we use hashset
-    l=0
-    if no duplicate:
-     update len and r+=1
-    else:
-     l-=1--->shirk window length
-     remove ele from hashset
+
+
+  class Solution:
+    def lengthOfLongestSubstring(self, s: str) -> int:
+        l,r=0,0
+        sd=set()
+        long=0
+        while r<len(s):
+            if s[r] not in sd:
+                sd.add(s[r])
+                long=max(long,r-l+1)
+                r+=1
+            else:
+                sd.remove(s[l])
+                l+=1
+        return long
+
+
+
+2..by using dictionary we can reduce time to O(n) --need to do
 
     

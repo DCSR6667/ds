@@ -1,14 +1,36 @@
 1...the first approach is nothing but a brute force approach----O(n2)
 2...sliding window pattern---O(n)
-take l,total,res variables
-    for r in range(len(nums)):
-            total+=nums[r]
-            while total>=target:---->it will execute only once[prevent r++]
-                res=min(res,r-l+1)
-                total-=nums[l]
+
+class Solution:
+    def minSubArrayLen(self, target: int, nums: List[int]) -> int:
+        length=math.inf
+        for i in range(len(nums)):
+            sum=0
+            for j in range(i,len(nums)):
+                sum=sum+nums[j]
+                if sum>=target:
+                    length=min(length,j-i+1)
+        if length==math.inf:
+            return 0
+        else:
+            return length
+                    
+
+
+
+class Solution:
+    def minSubArrayLen(self, target: int, nums: List[int]) -> int:
+        l,r=0,0
+        res=math.inf
+        sum=0
+        while r<len(nums):
+            sum=sum+nums[r]
+            while sum>=target:
+                res=min(r-l+1,res)
+                sum=sum-nums[l]
                 l+=1
+            r=r+1
         if res==math.inf:
             return 0
         else:
             return res
-   

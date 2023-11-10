@@ -1,0 +1,17 @@
+1.this problem can be solved by sliding window problem--O(n)
+concept used in this problem is window and turning point
+
+
+class Solution:
+    def maxSubArray(self, nums: List[int]) -> int:
+        l,r=0,0
+        max=-math.inf
+        sum=0
+        while r<len(nums):
+            sum=sum+nums[r]
+            if sum>max:
+                max=sum
+            if sum<0:
+                sum=0
+            r+=1
+        return max
